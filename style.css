@@ -1,0 +1,546 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  /* display: block; */
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-family: "Bai Jamjuree", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: hsl(192, 100%, 9%);
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+  font-size: 18px;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: "Bai Jamjuree", serif;
+  font-style: normal;
+}
+#background {
+  background-color: hsl(193, 100%, 96%);
+  background-image: url("./images/bg-hero-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+}
+#logo {
+  width: 15%;
+}
+#navbar button {
+  width: 12%;
+  border-radius: 20px;
+  border-style: none;
+  background-color: white;
+  font-size: 15px;
+  box-shadow: 2px 2px 10px 3px gray;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.flex {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 2rem 0 0 0;
+}
+#contant {
+  width: 45%;
+  padding: 3rem;
+}
+#contant h1 {
+  font-size: 45px;
+}
+#contant p {
+  padding: 2rem 0 2rem 0;
+  width: 90%;
+}
+#contant button {
+  /* width: 50%; */
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem 0.5rem 2rem;
+  border-radius: 20px;
+  background-color: hsl(322, 100%, 66%);
+  color: white;
+  border-style: none;
+  cursor: pointer;
+}
+#mockup {
+  width: 45%;
+  padding: 2rem 2rem;
+}
+#mockupimg {
+  width: 100%;
+}
+
+/* section1 */
+
+.box {
+  width: 80%;
+  display: flex;
+  padding: 2rem;
+  margin: 5rem auto;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px 3px gray;
+}
+#growdiv {
+  padding: 0 0 0 3rem;
+}
+
+#growimg {
+  width: 70%;
+  margin-left: 3rem;
+}
+#grow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 0 3rem;
+}
+#grow h2 {
+  font-size: 30px;
+}
+#grow p {
+  width: 80%;
+  font-size: 18px;
+  color: hsl(208, 11%, 55%);
+  padding: 2rem 0 0 0;
+}
+
+/* section2 */
+#flowingdiv {
+  padding: 0 0 0 3rem;
+}
+#flowingimg {
+  width: 70%;
+}
+#flowing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem 0 0rem;
+}
+#flowing h2 {
+  font-size: 30px;
+}
+#flowing p {
+  width: 90%;
+  font-size: 18px;
+  color: hsl(208, 11%, 55%);
+  padding: 2rem 0 0 0;
+}
+/* section3 */
+#userimg {
+  width: 70%;
+  margin-left: 3rem;
+}
+#user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0rem 0 3rem;
+}
+#user h2 {
+  font-size: 30px;
+}
+#user p {
+  width: 90%;
+  font-size: 18px;
+  color: hsl(208, 11%, 55%);
+  padding: 2rem 0 0 0;
+}
+/* section4 */
+.box4 {
+  width: 40%;
+  background-color: white;
+  padding: 2rem 0;
+  box-shadow: 2px 2px 10px 3px gray;
+  border-radius: 20px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.box4 h2 {
+  padding: 0 0 2rem 0;
+}
+.box4 button {
+  width: 50%;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem 0.5rem 2rem;
+  border-radius: 20px;
+  background-color: hsl(322, 100%, 66%);
+  color: white;
+  border-style: none;
+  cursor: pointer;
+}
+/* footer */
+.footer {
+  background-color: hsl(192, 100%, 9%);
+  color: white;
+  display: flex;
+  padding: 6rem 5rem 0 5rem;
+  justify-content: center;
+  position: relative;
+  margin-top: -5rem;
+  z-index: 0;
+  border-style: none;
+}
+.footer p {
+  color: white;
+}
+.footernav {
+  width: 20%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detail {
+  width: 30%;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.detail p {
+  color: white;
+  font-size: 18px;
+  padding: 0 0 1rem 0;
+  width: 100%;
+}
+.detail p img {
+  padding: 0 0.5rem 0 0;
+}
+.navmenu1 {
+  padding: 0 0 0 5rem;
+}
+.navmenu2 {
+  padding: 0 0 0 5rem;
+}
+.navmenu1 p {
+  color: white;
+  padding: 0.5rem 0 0 0;
+}
+.navmenu2 p {
+  color: white;
+  padding: 0.5rem 0 0 0;
+}
+#address {
+  padding: 1rem 0 1rem 0;
+}
+.social p {
+  color: white;
+}
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#icon {
+  border: 2px solid white;
+  font-size: 20px;
+  padding: 0.5em;
+  margin-left: 0.5em;
+  border-radius: 50px;
+  cursor: pointer;
+}
+#icon:hover {
+  transition: 1s;
+  color: hsl(322, 100%, 66%);
+  border: 2px solid hsl(322, 100%, 66%);
+}
+#copy {
+  background-color: hsl(192, 100%, 9%);
+  margin: 0 auto;
+  width: 100%;
+  border-style: none;
+}
+#copy p {
+  color: white;
+  text-align: right;
+  padding: 0 7rem 3rem 0;
+}
+
+@media screen and (max-width: 1025px) {
+  /* section1 */
+  #mockup {
+    width: 55%;
+  }
+  #contant h1 {
+    font-size: 33px;
+  }
+  /* sectiom 4 */
+  .box4 {
+    width: 50%;
+  }
+
+  /* footer */
+
+  .footernav {
+    width: 35%;
+    padding: 0;
+  }
+  .navmenu1 {
+    padding: 0 0 0 3rem;
+  }
+  .navmenu2 {
+    padding: 0 0 0 3rem;
+  }
+}
+@media screen and (max-width: 830px) {
+  #navbar {
+    padding: 2rem 1rem;
+  }
+  /* section1 */
+  #mockup {
+    width: 50%;
+  }
+  #contant h1 {
+    font-size: 25px;
+  }
+  #contant {
+    width: 50%;
+  }
+  #contant p {
+    width: 100%;
+  }
+  #try {
+    width: 80%;
+  }
+  .box {
+    width: 95%;
+  }
+  #growimg {
+    width: 100%;
+    margin: 0;
+  }
+  #grow p {
+    width: 100%;
+    margin: 0;
+  }
+  /* section2 */
+  #flowingimg {
+    width: 100%;
+  }
+  #flowingdiv {
+    padding: 0 2rem 0 0;
+  }
+  #flowing h2 {
+    width: 100%;
+    font-size: 28px;
+  }
+  #flowing p {
+    width: 100%;
+  }
+  /* section 3 */
+  #userimg {
+    width: 100%;
+  }
+  #user p {
+    width: 100%;
+  }
+
+  /* sectiom 4 */
+  .box4 {
+    width: 70%;
+  }
+
+  /* footer */
+
+  .footernav {
+    width: 35%;
+    padding: 0;
+  }
+  .navmenu1 {
+    padding: 0 0 0 3rem;
+  }
+  .navmenu2 {
+    padding: 0 0 0 3rem;
+  }
+  .footer {
+    padding: 8rem 1rem 0 1rem;
+  }
+}
+@media screen and (max-width: 801px) {
+  #navdiv {
+    display: flex;
+    justify-content: space-between;
+  }
+  #navbar {
+    width: 95%;
+    text-align: center;
+  }
+  #navbar button {
+    width: 20%;
+  }
+  #navbar img {
+    width: 30%;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #contant {
+    width: 100%;
+  }
+  #mockup {
+    width: 100%;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footernav {
+    width: 70%;
+    padding: 0;
+    margin: 0;
+  }
+  .navmenu2 {
+    padding: 2rem 0 0 0;
+  }
+  .social {
+    padding: 2rem 0 0 0;
+  }
+  #copy {
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+  }
+  #copy p {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  #grow {
+    padding: 0;
+  }
+  #growdiv {
+    padding: 0;
+  }
+  #user {
+    padding: 0;
+    margin: 0;
+  }
+  #userimg {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 541px) {
+  .box4 {
+    width: 80%;
+  }
+  .box4 h2 {
+    font-size: 20px;
+  }
+  .box4 button {
+    font-size: 18px;
+    width: 70%;
+  }
+
+  #navbar button {
+    width: 30%;
+  }
+  #navbar img {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 431px) {
+  #navbar button {
+    width: 35%;
+  }
+  #navbar img {
+    width: 40%;
+  }
+  .box4 {
+    width: 90%;
+  }
+  .box4 h2 {
+    font-size: 18px;
+  }
+  .box4 button {
+    font-size: 15px;
+    width: 70%;
+  }
+  .footer {
+    text-align: left;
+  }
+}
